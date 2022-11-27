@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        div {
+            margin: 2em;
+            padding: 1em;
+            background-color: lightcyan;
+            color: blue;
+            outline: 1pt solid green ;
+            width: 25%;
+            outline-offset: 5px;
+            box-sizing: border-box;
+            height: 10em;
+            position: relative;
+        }
+
+        body {
+            font-size: 12pt;
+
+        }
+
+        div:hover{
+            outline-width: 6pt;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>Box</div>
+    <div style="left: 20em">Box2</div>
+    <div>Box3</div>
+</body>
+</html>
