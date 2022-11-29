@@ -1,0 +1,59 @@
+@media only screen and (min-width: 320px) {
+    body{
+        background: rgb(104, 11, 167);
+    }
+
+    .resize {
+        background-color: black;
+        height: 100px;
+        width: 100px;
+    }
+}
+@media only screen and (min-width: 480px) {
+    body{
+        background: rgb(238, 167, 14);
+    }
+    
+    .resize {
+        background-color: black;
+        height: 300px;
+        width: 300px;
+    }
+}
+@media only screen and (min-width: 600px) {
+    body{
+        background: rgb(173, 23, 141);
+    }
+    
+    .resize {
+        background-color: black;
+        height: 300px;
+        width: 300px;
+    }
+}
+@media only screen and (min-width: 801px) {
+    body{
+        background: rgb(18, 133, 8);
+    }
+
+    .resize {
+        background-color: black;
+        height: 700px;
+        width: 700px;
+    }
+}
+@media only screen and (min-width: 1025px) {
+
+    body{
+        background: rgb(18, 22, 245);
+    }
+
+    .resize {
+        background-color: black;
+        height: 900px;
+        width: 900px;
+    }
+}
+
+
+
