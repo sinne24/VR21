@@ -38,3 +38,41 @@ people2.splice(2,1,"Elizabeth", "Artie");
 // 9
 
 let withBob = people2.concat("Bob");
+
+//callback practice:
+// mapEach
+let arr = [];
+
+function mapEach(arr, callback){
+    for(let i =0; i < arr.length; i++){
+        newArr.push(callback(arr[1]));
+    }
+
+let multiplyByTwo = (num) => {
+    return num = 2;
+}
+
+console.log(mapEach(arr, multiplyByTwo));
+}
+
+//filter
+
+const newArray = [1,2,3,4,5,6,7,8];
+
+function isEven (num){
+    return num % 2 === 0;
+}
+
+function filter(arr, callback){
+    let results = [];
+    for(let i = 0; i < arr.length; i++){
+        if(callback(arr[i])){
+            results.push(arr[i]);
+        }
+    }
+    return results;
+}
+
+console.log(filter(newArray, isEven));
+
+
