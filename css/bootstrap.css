@@ -19,4 +19,18 @@
   padding-top: 30px;
 }
 
+.card-body {
+  background-color: rgba(151, 150, 150, 0.342)!important;
+}
+
+.card {
+  height: 24rem!important;
+  min-height: 24rem!important;
+  max-height: 24rem!important;
+}
+
+.card > img {
+  max-height: 12rem!important;
+}
+
 
