@@ -32,3 +32,23 @@ console.log("14. is null? "); console.log(null === null);
 let n;
 console.log("15. undefined? " + n);
 
+let sentence = "I am new to javascript";
+console.log(sentence.slice(0,8));
+console.log(sentence)
+
+let stringArray = sentence.split(" ");
+console.log(stringArray);
+
+console.log(sentence.replace(/ /, " woot woot "));
+console.log(sentence.replace(/ /g, " woot woot ")); //g stands for global
+
+const age = 30;
+if (age > 27){
+    console.log("#Adulting");
+}else{
+    console.log("Just a wee babe");
+}
+
+// Function example
+const writeThatName = name => console.log(`my name is ${name}`);
+writeThatName("Cindy");
