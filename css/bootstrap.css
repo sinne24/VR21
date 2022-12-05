@@ -20,7 +20,12 @@
 }
 
 .card-body {
-  background-color: rgba(192, 189, 189, 0.438)!important;
+  background-color: rgba(214, 212, 212, 0.192)!important;
+}
+
+.card-body > h5{
+  color: rgb(71, 71, 71)!important;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .card {
