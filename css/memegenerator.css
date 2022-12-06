@@ -1,0 +1,27 @@
+.card-img {
+    position: relative;
+}
+
+.card-text-top {
+    position: absolute;
+    top: 1rem;
+    font-size: xx-large;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.card-text-bottom {
+    position: absolute;
+    bottom: 1rem;
+    font-size: xx-large;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.delete {
+    position: absolute;
+    top:1rem;
+    right: 1rem;
+}
