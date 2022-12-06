@@ -3,10 +3,7 @@ let submitButton = document.querySelector('#submit');
 submitButton.addEventListener('click', createCard);
 
 function deleteCard(e){
-    debugger;
-    console.log(e.target.parentNode.parentNode.parentNode);
         e.target.parentNode.parentNode.parentNode.remove();
-        debugger;
 }
 
 function createCard() {
