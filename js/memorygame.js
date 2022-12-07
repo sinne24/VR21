@@ -93,7 +93,7 @@ cards.forEach(card => card.addEventListener('click', event => {
         setTimeout(()=>{
           card1.classList.toggle("notflipped");
           card2.classList.toggle("notflipped");
-        }, 2000);
+        }, 1000);
       }
 
       numCardsFlipped = 0;
@@ -104,7 +104,7 @@ cards.forEach(card => card.addEventListener('click', event => {
           cards.forEach(card => {
             card.classList.toggle("notflipped");
           });
-        }, 3000);
+        }, 1500);
       }
     }
 }));
