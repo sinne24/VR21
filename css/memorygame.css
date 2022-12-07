@@ -1,0 +1,31 @@
+#game div {
+  border: 1px solid black;
+  width: 15%;
+  height: 200px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.red{
+  background-color: rgb(252, 3, 3);
+}
+
+.blue{
+  background-color: rgb(45, 77, 254);
+}
+
+.green{
+  background-color: rgb(7, 195, 1);
+}
+
+.orange{
+  background-color: rgb(247, 137, 34);
+}
+
+.purple {
+  background-color: rgb(150, 46, 182);
+}
+
+.notflipped {
+  background-color: gray !important;
+}

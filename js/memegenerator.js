@@ -11,7 +11,6 @@ function createCard() {
     let topText = document.querySelector('#topText');
     let bottomText = document.querySelector('#bottomText');
 
-    debugger;
     event.preventDefault();
     const contentCard = `<div class="col-md-6">
     <div class="card text-bg-dark">

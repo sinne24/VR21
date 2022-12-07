@@ -75,4 +75,36 @@ function filter(arr, callback){
 
 console.log(filter(newArray, isEven));
 
+//example of local storage
+const users = [{id: 1, initial:"A"}, {id: 2, initial:"B"}, {id: 3, initial:"C"}];
+
+const newArr = users.map(user => {
+    if(user.id === 2){
+        user.initial = "Z";
+    }
+    return user;
+});
+
+//set items
+localStorage.setItem("users", JSON.stringify(newArr));
+
+//retrieve items
+console.log(JSON.parse(localStorage.getItem("users")));
+
+debugger;
+
+//primitive gotcha
+
+let myName = "Cindy";
+
+const newName = myName;
+
+console.log(myName === newName);
+
+const ogArr = ["A", "B", "C", "D"];
+const copyArr = ogArr;
+
+ogArr[0] = "E";
+
+console.log("Copy Array: ", copyArr);
 
