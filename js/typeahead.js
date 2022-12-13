@@ -18,7 +18,10 @@ const arrayOfObjects = [
 const SUGGESTIONS_ID = "suggestions";
 
 const searchInput = document.getElementById("search");
-searchInput.addEventListener("keyup", handleKeyUp);
+
+// Call debounce to call the handleKeyUp function so that 
+// the suggestions don't show until the person is done typing
+searchInput.addEventListener("keyup", debounce(handleKeyUp));
 
 function handleKeyUp(e) {
     // console.log(searchInput.value); check that we are checking what the user types
@@ -41,12 +44,16 @@ function handleKeyUp(e) {
 function showSuggestions(suggestions){
     const ul = document.getElementById(SUGGESTIONS_ID);
 
-    //add elements that are applicable
-    suggestions.forEach((result) => {
-        const li = document.createElement("li");
-        li.innerHTML = `<li><a href="${result.link}">${result.name}</a></li>`;
-        ul.append(li);
-    });
+    if(suggestions.length === 0){
+        ul.innerHTML = `<li>No matching results</li>`;
+    } else {
+        //add elements that are applicable
+        suggestions.forEach((result) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<li><a href="${result.link}">${result.name}</a></li>`;
+            ul.append(li);
+        });
+    }
 } 
 
 function clearSuggestions(){
@@ -55,3 +62,12 @@ function clearSuggestions(){
         ul.firstElementChild.remove();
     }
 }
+
+//Debounce
+function debounce(func, timeout = 300){
+    let timer;
+    return (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    };
+  }
