@@ -2,6 +2,13 @@
 const arrayOfObjects = [
     { name: "Fox", link: "foxnews.com" },
     { name: "Fandango", link: "fandango.com" },
+    { name: "Fabletics", link: "fabletics.com" },
+    { name: "Famous Footwear", link: "famousfootwear.com" },
+    { name: "Fashion Nova", link: "fashionnova.com" },
+    { name: "Facebook", link: "facebook.com" },
+    { name: "FA World Entertainment", link: "faworldentertainment.com" },
+    { name: "Fanconi", link: "fanconi.org" },
+    { name: "Fa Euro New York", link: "faeuro.com" },
     { name: "CNN", link: "cnn.com" },
     { name: "Google", link: "google.com" },
     { name: "YouTube", link: "youtube.com" },
@@ -12,9 +19,9 @@ const arrayOfObjects = [
     { name: "Telegram", link: "telegram.org" },
     { name: "Discord", link: "discord.com" },
     { name: "Slack", link: "slack.com" },
-  
   ];
 
+// const MAX_RESULTS = 2; <-- CAN BE UNCOMMENTED!!
 const SUGGESTIONS_ID = "suggestions";
 
 const searchInput = document.getElementById("search");
@@ -34,8 +41,10 @@ function handleKeyUp(e) {
     if(userInput){
         //check for words that contain the text the user has typed
         const suggestions = arrayOfObjects.filter((result) => 
-            result.name.toLowerCase().startsWith(userInput)
-        );
+            result.name.toLowerCase().startsWith(userInput))
+            //can filter by number of results you want shown
+            //but I'm not splicing because I want the scroll bar
+            //.slice(0, MAX_RESULTS); <-- CAN BE UNCOMMENTED!!
         // console.log(suggestions);check that the suggestions are populating correctly   
         showSuggestions(suggestions);
     }
@@ -64,7 +73,7 @@ function clearSuggestions(){
 }
 
 //Debounce
-function debounce(func, timeout = 300){
+function debounce(func, timeout = 100){
     let timer;
     return (...args) => {
       clearTimeout(timer);
